@@ -9,7 +9,7 @@ const About: React.FC = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             {/* Using the real action shot of James for the About section */}
             <img 
-              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop" 
+              src="https://raw.githubusercontent.com/skyboltlabs/jameshandyman/refs/heads/main/pages/james-picture.jpg?q=80&w=2069&auto=format&fit=crop" 
               alt="James Mutema restoring woodwork" 
               className="w-full h-full object-cover aspect-[4/5] object-center"
             />
