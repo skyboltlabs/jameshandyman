@@ -40,7 +40,7 @@ const projects = [
   {
     title: "Roof Waterproofing Project",
     category: "Waterproofing",
-    image: "https://images.unsplash.com/photo-1635424710928-0544e8512efe?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1594479323887-2fc5520eaf38?q=80&w=800&auto=format&fit=crop",
     location: "Hout Bay"
   }
 ];

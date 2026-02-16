@@ -8,13 +8,13 @@ interface HeroProps {
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?q=80&w=2070&auto=format&fit=crop",
     tag: "Serving Cape Town & Surrounds",
     title: ["Your Home, Fixed Right", "the First Time."],
     description: "From minor repairs to major renovations, James Handyman delivers quality workmanship and reliable service you can trust.",
   },
   {
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1632120377007-c2adc3017b1e?q=80&w=2070&auto=format&fit=crop",
     tag: "Expert Renovations",
     title: ["Transform Your", "Living Space."],
     description: "Complete home remodeling services including kitchens, bathrooms, and full home makeovers tailored to your vision.",
