@@ -4,7 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Handyman | Professional Services Cape Town</title>
+    <title>James Handyman | Professional Home Repairs & Renovations Cape Town</title>
+    <meta name="description" content="Professional handyman services in Cape Town. James Handyman offers expert renovations, carpentry, painting, plumbing, and waterproofing. Quality workmanship guaranteed.">
+    <meta name="keywords" content="Handyman Cape Town, home repairs Cape Town, kitchen renovations, painting services, plumbing repairs, waterproofing Cape Town, James Handyman">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jameshandyman.capetown/">
+    <meta property="og:title" content="James Handyman | Your Home, Fixed Right the First Time.">
+    <meta property="og:description" content="Expert handyman services across Cape Town. From Sea Point to Constantia, we deliver reliable home repairs and renovations.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- JSON-LD Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "James Handyman",
+      "image": "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?q=80&w=800&auto=format&fit=crop",
+      "@id": "",
+      "url": "https://jameshandyman.capetown/",
+      "telephone": "+27780626566",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cape Town",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9249,
+        "longitude": 18.4241
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://facebook.com/jameshandymancapetown",
+        "https://instagram.com/jameshandymancpt"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "210"
+      },
+      "areaServed": "Cape Town and surrounding areas"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -15,12 +74,10 @@
         .font-outfit {
             font-family: 'Outfit', sans-serif;
         }
-        /* Visual safeguard: basic background color while React mounts */
         #root {
             min-height: 100vh;
         }
     </style>
-    <!-- Process shim to prevent ReferenceErrors in browser ESM -->
     <script>
         window.process = { env: { NODE_ENV: 'production' } };
     </script>
@@ -38,7 +95,6 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
     <div id="root"></div>
-    <!-- Entry point script -->
     <script type="module" src="./index.tsx"></script>
 </body>
 </html>

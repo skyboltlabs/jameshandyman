@@ -31,6 +31,28 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // SEO: Update page title based on current page
+  useEffect(() => {
+    const siteName = "James Handyman Cape Town";
+    let title = siteName;
+    
+    switch (currentPage) {
+      case 'services': title = `Services | ${siteName}`; break;
+      case 'portfolio': title = `Recent Projects Portfolio | ${siteName}`; break;
+      case 'about': title = `About James Mutema | ${siteName}`; break;
+      case 'contact': title = `Get a Free Quote | ${siteName}`; break;
+      case 'service-detail': 
+        const serviceName = activeServiceId ? activeServiceId.charAt(0).toUpperCase() + activeServiceId.slice(1) : "Service";
+        title = `${serviceName} Expert | ${siteName}`; 
+        break;
+      case 'privacy': title = `Privacy Policy | ${siteName}`; break;
+      case 'terms': title = `Terms of Service | ${siteName}`; break;
+      default: title = `Professional Handyman Services Cape Town | ${siteName}`;
+    }
+    
+    document.title = title;
+  }, [currentPage, activeServiceId]);
+
   const navigateTo = (page: Page, serviceId: string | null = null) => {
     setCurrentPage(page);
     setActiveServiceId(serviceId);
