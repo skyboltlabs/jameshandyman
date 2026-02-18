@@ -5,7 +5,7 @@ const About: React.FC = () => {
   const [imageError, setImageError] = useState(false);
   
   // The most reliable GitHub Raw format: https://raw.githubusercontent.com/[USER]/[REPO]/[BRANCH]/[PATH]
-  const jamesImageUrl = "https://raw.githubusercontent.com/skyboltlabs/jameshandyman/main/james-picture.jpg";
+  const jamesImageUrl = "https://raw.githubusercontent.com/skyboltlabs/jameshandyman/refs/heads/main/pages/james-picture.jpg";
   const fallbackImageUrl = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop";
 
   return (
