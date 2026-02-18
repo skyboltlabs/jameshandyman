@@ -1,17 +1,24 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const About: React.FC = () => {
+  const [imageError, setImageError] = useState(false);
+  
+  // The most reliable GitHub Raw format: https://raw.githubusercontent.com/[USER]/[REPO]/[BRANCH]/[PATH]
+  const jamesImageUrl = "https://raw.githubusercontent.com/skyboltlabs/jameshandyman/main/james-picture.jpg";
+  const fallbackImageUrl = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop";
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col lg:flex-row items-center gap-16">
         <div className="lg:w-1/2 relative">
-          <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
-            {/* James's Professional Portrait */}
+          <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group bg-slate-200">
+            {/* James's Professional Portrait with Fallback */}
             <img 
-              src="https://raw.githubusercontent.com/skyboltlabs/jameshandyman/refs/heads/main/pages/james-picture.jpg" 
+              src={imageError ? fallbackImageUrl : jamesImageUrl} 
               alt="James Mutema, professional handyman in Cape Town, smiling and ready to help" 
-              className="w-full h-full object-cover aspect-[4/5] object-center transition-transform duration-700 group-hover:scale-105"
+              onError={() => setImageError(true)}
+              className={`w-full h-full object-cover aspect-[4/5] object-center transition-all duration-700 ${imageError ? 'grayscale-0' : 'group-hover:scale-105'}`}
             />
             
             {/* Experience Badge Overlay */}
