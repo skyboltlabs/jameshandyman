@@ -6,28 +6,45 @@ const About: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col lg:flex-row items-center gap-16">
         <div className="lg:w-1/2 relative">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            {/* Using the real action shot of James for the About section */}
+          <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
+            {/* James's Professional Portrait */}
             <img 
-              src="https://raw.githubusercontent.com/skyboltlabs/jameshandyman/refs/heads/main/pages/james-picture.jpg?q=80&w=2069&auto=format&fit=crop" 
-              alt="James Mutema restoring woodwork" 
-              className="w-full h-full object-cover aspect-[4/5] object-center"
+              src="https://raw.githubusercontent.com/skyboltlabs/jameshandyman/refs/heads/main/pages/james-picture.jpg" 
+              alt="James Mutema, professional handyman in Cape Town, smiling and ready to help" 
+              className="w-full h-full object-cover aspect-[4/5] object-center transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Added a subtle overlay to match the high-end site aesthetic */}
-            <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay"></div>
+            
+            {/* Experience Badge Overlay */}
+            <div className="absolute top-6 left-6 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow-xl backdrop-blur-md border border-white/20">
+              <span className="block text-2xl font-black leading-none">15+</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest">Years Experience</span>
+            </div>
+
+            {/* Subtle Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none"></div>
           </div>
-          {/* Decorative stats card */}
-          <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-3xl shadow-2xl hidden md:block max-w-xs border border-slate-100">
+
+          {/* Floating Verification Card */}
+          <div className="absolute -bottom-10 -right-4 md:-right-10 bg-white p-8 rounded-3xl shadow-2xl max-w-xs border border-slate-100 z-10 transform transition-transform hover:-translate-y-2">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="bg-blue-600 p-3 rounded-2xl">
+              <div className="bg-green-500 p-3 rounded-2xl">
                 <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h5 className="text-lg font-bold text-slate-900">Verified Pro</h5>
+              <div>
+                <h5 className="text-lg font-bold text-slate-900">Verified Pro</h5>
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
             </div>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              "My commitment to quality workmanship and customer satisfaction sets me apart. I treat every home as if it were my own."
+            <p className="text-slate-600 text-sm leading-relaxed italic">
+              "Honesty and precision are the foundations of my work. I'm here to ensure your home projects are stress-free."
             </p>
             <p className="mt-4 font-bold text-slate-900">— James Mutema</p>
           </div>
@@ -35,62 +52,36 @@ const About: React.FC = () => {
 
         <div className="lg:w-1/2">
           <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">The Expert Behind The Work</h2>
-          <h3 className="text-4xl md:text-5xl font-bold font-outfit text-slate-900 mb-8">Meet James Mutema</h3>
+          <h3 className="text-4xl md:text-5xl font-bold font-outfit text-slate-900 mb-8 leading-tight">Your Trusted Home Partner in Cape Town</h3>
           
           <div className="space-y-6 text-slate-600 text-lg leading-relaxed mb-10">
             <p>
-              With years of experience in the handyman industry, James Mutema has built a reputation for delivering exceptional home improvement services across Cape Town.
+              James Mutema isn't just a handyman; he's a dedicated craftsman with a passion for restoring and improving Cape Town's beautiful homes. With over a decade of hands-on experience, James has become the first call for homeowners from Sea Point to the Southern Suburbs.
             </p>
             <p>
-              From small repairs to major renovations, James approaches every project with the same level of professionalism and attention to detail. His motto is simple: <span className="text-slate-900 font-bold italic">"Your Home, Fixed Right the First Time."</span>
+              He believes that no job is too small for absolute perfection. Whether he's wearing his safety gear on a renovation site or fixing a minor plumbing leak, his commitment to <span className="text-blue-600 font-bold">reliability, punctuality, and quality</span> remains unchanged.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-slate-200">
-              <div className="text-blue-600 mr-4">
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+            {[
+              { title: "Fully Insured", desc: "Your property is protected while we work.", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" },
+              { title: "Always On Time", desc: "We value your schedule and arrive promptly.", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
+              { title: "Master Craftsman", desc: "Expertise across plumbing, electrical, and wood.", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+              { title: "Clean Worksite", desc: "We leave your home tidier than we found it.", icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" }
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-blue-600 mr-4 mt-1">
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                  </svg>
+                </div>
+                <div>
+                  <h6 className="font-bold text-slate-900">{item.title}</h6>
+                  <p className="text-sm text-slate-500 leading-tight mt-1">{item.desc}</p>
+                </div>
               </div>
-              <div>
-                <h6 className="font-bold text-slate-900">Quality Guaranteed</h6>
-                <p className="text-sm">Every job is completed to the highest standards with attention to detail.</p>
-              </div>
-            </div>
-            <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-slate-200">
-              <div className="text-blue-600 mr-4">
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <h6 className="font-bold text-slate-900">Reliable & Punctual</h6>
-                <p className="text-sm">We arrive on time and complete projects within agreed timeframes.</p>
-              </div>
-            </div>
-            <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-slate-200">
-              <div className="text-blue-600 mr-4">
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <div>
-                <h6 className="font-bold text-slate-900">Experienced Pro</h6>
-                <p className="text-sm">Years of experience in home improvement and repair services.</p>
-              </div>
-            </div>
-            <div className="flex items-start p-4 bg-gray-50 rounded-2xl border border-slate-200">
-              <div className="text-blue-600 mr-4">
-                <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <div>
-                <h6 className="font-bold text-slate-900">Insured & Trusted</h6>
-                <p className="text-sm">Fully insured services with a track record of satisfied customers.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
